@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>TourCation - Main</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Failing Systems</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="overview.html">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Map.html">Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header
+        style="min-height: 100%; padding: 18rem; background-image: url('ec.png'); background-repeat: no-repeat; background-size: cover">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase" style="color: white">Failures of the Electoral College</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">A shortcoming of democracy in America</h2>
+                    <a class="btn btn-primary" href="#about">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Projects-->
+    <section class="projects-section" style="background-color: white" id="about">
+        <div class="container px-4 px-lg-5">
+            <!-- Featured Project Row-->
+            <div class="row gx-0 mb-lg-5 align-items-center bg-black" style="color: white">
+                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="pbsec.png"
+                        alt="electoral map" /></div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-lg-left">
+
+
+                        <h4 style="">About</h4>
+                        <h7>The president is not elected by popular vote. Instead, 538 electors are unequally
+                            distributed across America to attempt to represent the people's interests. However, this
+                            leads to unequal representation.</h6>
+                            <button type="button" class="btn btn-link border my-5"
+                                style="border: 3px; border-color: white; padding: 14px">More Info</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Project One Row-->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6" id="map" style="min-height: 10rem"></div>
+                <div class="col-lg-6">
+                    <div class="bg-black h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-lg-left">
+
+                                <script>
+                                    var map = L.map('map').setView([37.8, -96], 4);
+
+                                    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        maxZoom: 19,
+                                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                                    }).addTo(map);
+
+                                    L.geoJson(statesData).addTo(map);
+
+                                </script>
+
+
+                                <h4 class="text-white" style="text-align: center">Interactive Map</h4>
+                                <h6 class="text-white">Use this interactive map to find out how in a two party system, a
+                                    candidate can win without winning the popular vote.</h6>
+                                    <button type="button" class="btn btn-link border my-5 px-5"
+                                style="border: 3px; border-color: white; padding: 14px">go</button>
+                                <hr class="d-none d-lg-block mb-0 ms-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project Two Row-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="constitution.jpg" alt="..." /></div>
+                <div class="bg-black col-lg-6 order-lg-first">
+                    <divcx bv xv class="bg-black h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-lg-right">
+                                <h4 class="text-white" style="text-align: center">History</h4>
+                                    <p style="color: white">Find out why we have this strange system to elect our president by going back over two hundred years at the Constitutional Convention</p>
+                                    <button type="button" class="btn btn-link border my-4"
+                                style="border: 3px; border-color: white; padding: 14px">More Info</button>
+                                <hr class="d-none d-lg-block mb-0 me-0" />
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Contact-->
+    <section class="contact-section bg-black">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <p style="color: white">By: Raymond Moy</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
